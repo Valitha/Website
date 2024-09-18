@@ -10,12 +10,12 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #ffeef8; /* Light pink background */
             color: #333;
             line-height: 1.6;
         }
         header {
-            background-color: #333;
+            background-color: #d4a5ea; /* Light purple */
             color: #fff;
             padding: 10px 0;
             text-align: center;
@@ -29,7 +29,7 @@
             display: flex;
             justify-content: center;
             margin: 20px 0;
-            background: #333;
+            background: #d4a5ea; /* Light purple */
         }
         nav a {
             color: #fff;
@@ -37,16 +37,24 @@
             text-decoration: none;
         }
         nav a:hover {
-            background-color: #575757;
+            background-color: #b583d6; /* Darker purple on hover */
         }
         .tab-content {
             display: none;
             padding: 20px;
             background: #fff;
             margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        #about img {
+            max-width: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px;
         }
         footer {
-            background-color: #333;
+            background-color: #d4a5ea; /* Light purple */
             color: #fff;
             text-align: center;
             padding: 10px 0;
@@ -72,6 +80,8 @@
         <!-- About Me Section -->
         <section id="about" class="tab-content">
             <h2>About Me</h2>
+            <!-- Profile Image -->
+            <img src="path/to/your/profile.jpg" alt="Profile Image">
             <p>
                 <!-- Add your bio here -->
                 Hello! I'm [Your Name], a [Your Profession/Interest]. I enjoy [Your Interests].
