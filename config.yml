@@ -1,0 +1,15 @@
+theme: jekyll-theme-merlot
+title: My Purple Themed Site
+description: A site with a purple theme
+baseurl: ""
+url: "https://Valitha.github.io"
+
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about"
+  - title: "Projects"
+    url: "/projects"
+  - title: "Contact"
+    url: "/contact"
