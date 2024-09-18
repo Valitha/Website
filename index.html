@@ -99,8 +99,8 @@
             <p>Follow me on social media:</p>
             <ul>
                 <li><a href="https://www.instagram.com/val_schr06/" target="_blank">Instagram</a></li>
-                <li><a href="#" target="_blank">Discord</a></li>
-                <li><a href="#" target="_blank">Youtube</a></li>
+                <li><a href="#" target="">Discord</a></li>
+                <li><a href="#" target="https://www.youtube.com/@_Valitha_">Youtube</a></li>
             </ul>
         </section>
     </div>
@@ -126,8 +126,8 @@
         // JavaScript to dynamically add portfolio items
         const portfolioItems = [
             { type: 'image', src: 'Art.jpg', description: 'My Recents' },
-            { type: 'youtube', src: 'https://www.youtube.com/embed/u10XdPd9mcE', description: 'My YouTube Video' },
-            { type: 'soundcloud', src: `<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1854432579&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>`, description: 'Xi Jinping Boss Fight Music' }
+            { type: 'youtube', src: 'https://www.youtube.com/embed/u10XdPd9mcE', description: 'Most Recent Upload' },
+            { type: 'soundcloud', src: `<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1854432579&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>`, description: 'Most Recent Song' }
         ];
 
         const portfolioContainer = document.getElementById('portfolio-items');
@@ -137,7 +137,7 @@
             div.className = 'item';
             
             if (item.type === 'image') {
-                div.innerHTML = `<img src="${item.src}" alt="Portfolio Image" style="width:100%;"><p>${item.description}</p>`;
+                div.innerHTML = `<img src="${item.src}" alt="" style="width:100%;"><p>${item.description}</p>`;
             } else if (item.type === 'youtube') {
                 div.innerHTML = `<iframe width="100%" height="315" src="${item.src}" frameborder="0" allowfullscreen></iframe><p>${item.description}</p>`;
             } else if (item.type === 'soundcloud') {
