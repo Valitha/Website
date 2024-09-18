@@ -65,7 +65,7 @@
 <body>
     <header>
         <div class="container">
-            <h1>My Personal Webpage</h1>
+            <h1>Valentina Schroeder</h1>
         </div>
     </header>
 
@@ -80,27 +80,25 @@
         <!-- About Me Section -->
         <section id="about" class="tab-content">
             <h2>About Me</h2>
-            <!-- Profile Image -->
             <img src="profile.jpg" alt="Profile Image">
             <p>
-                <!-- Add your bio here -->
-                haiiii!!! my names is valentina i am very passionate about ✨history✨ and ✨politics✨ (omggg that's why im doing them for an undergrad) and i want to use this to make the world a better place!!! sometimes I like to ✨write stories, draw, make music,  or code silly games and programs!!✨. feel free to message me on any platform, i am just a girl in the world :D
+                haiiii!!! my names is valentina i am very passionate about ✨history✨ and ✨politics✨ (omggg that's why im doing them for an undergrad) and i want to use this to make the world a better place!!! sometimes I like to ✨write stories, draw, make music, or code silly games and programs!!✨. feel free to message me on any platform, i am just a girl in the world :D
+            </p>
         </section>
 
         <!-- Portfolio Section -->
         <section id="portfolio" class="tab-content">
             <h2>Portfolio</h2>
-            <!-- Portfolio items will be appended here -->
             <div id="portfolio-items"></div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact" class="tab-content">
             <h2>Contact</h2>
-            <p>You can reach me via email: [Your Email]</p>
+            <p>You can reach me via email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
             <p>Follow me on social media:</p>
             <ul>
-                <li><a href="#" target="https://www.instagram.com/val_schr06/">Instagram</a></li>
+                <li><a href="https://www.instagram.com/val_schr06/" target="_blank">Instagram</a></li>
                 <li><a href="#" target="_blank">Discord</a></li>
                 <li><a href="#" target="_blank">Youtube</a></li>
             </ul>
@@ -127,9 +125,9 @@
 
         // JavaScript to dynamically add portfolio items
         const portfolioItems = [
-            { type: 'image', src: 'Art.jpg', description: 'Placeholder' },
-            { type: 'video', src: 'https://youtu.be/u10XdPd9mcE', description: 'Placeholder.' },
-            { type: 'audio', src: 'Bossfight.mp3', description: 'Xi Jinping Bossfight Music' }
+            { type: 'image', src: 'Art.jpg', description: 'My Art' },
+            { type: 'youtube', src: 'https://www.youtube.com/embed/u10XdPd9mcE', description: 'My YouTube Video' },
+            { type: 'soundcloud', src: `<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1854432579&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>`, description: 'Xi Jinping Boss Fight Music' }
         ];
 
         const portfolioContainer = document.getElementById('portfolio-items');
@@ -139,11 +137,11 @@
             div.className = 'item';
             
             if (item.type === 'image') {
-                div.innerHTML = `<img src="\${item.src}" alt="Portfolio Image" style="width:100%;"><p>\${item.description}</p>`;
-            } else if (item.type === 'video') {
-                div.innerHTML = `<video controls style="width:100%;"><source src="\${item.src}" type="video/mp4">Your browser does not support the video tag.</video><p>\${item.description}</p>`;
-            } else if (item.type === 'audio') {
-                div.innerHTML = `<audio controls><source src="\${item.src}" type="audio/mpeg">Your browser does not support the audio tag.</audio><p>\${item.description}</p>`;
+                div.innerHTML = `<img src="${item.src}" alt="Portfolio Image" style="width:100%;"><p>${item.description}</p>`;
+            } else if (item.type === 'youtube') {
+                div.innerHTML = `<iframe width="100%" height="315" src="${item.src}" frameborder="0" allowfullscreen></iframe><p>${item.description}</p>`;
+            } else if (item.type === 'soundcloud') {
+                div.innerHTML = `${item.src}<p>${item.description}</p>`;
             }
             
             portfolioContainer.appendChild(div);
