@@ -52,6 +52,17 @@
             display: block;
             margin: 0 auto 20px;
         }
+        .blog-post {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .blog-post h3 {
+            margin: 0 0 10px;
+        }
+        .blog-post p {
+            margin: 0;
+        }
         footer {
             background-color: #d4a5ea; /* Light purple */
             color: #fff;
@@ -71,6 +82,7 @@
     <nav>
         <a href="#" onclick="showTab('about')">About Me</a>
         <a href="#" onclick="showTab('portfolio')">Portfolio</a>
+        <a href="#" onclick="showTab('blog')">Blog</a> <!-- New Blog Tab -->
         <a href="#" onclick="showTab('contact')">Contact</a>
     </nav>
 
@@ -87,14 +99,21 @@
             <h2>Portfolio</h2>
             <div id="portfolio-items"></div>
         </section>
+        
+        <!-- Blog Section -->
+        <section id="blog" class="tab-content">
+            <h2>Blog</h2>
+            <div id="blog-posts"></div>
+        </section>
+
         <section id="contact" class="tab-content">
             <h2>Contact</h2>
             <p>You can reach me via email: <a href="mailto:justagirlieintheworld@outlook.com">justagirlieintheworld@outlook.com</a></p>
             <p>Follow me on social media:</p>
             <ul>
                 <li><a href="https://www.instagram.com/val_schr06/" target="_blank">Instagram</a></li>
-                <li><a href="https://discord.com/users/1222992432971513896" target="_blank">Discord:_Valitha_</a></li>
-                <li><a href="https://www.youtube.com/@_Valitha_" target="Blank">Youtube</a></li>
+                <li><a href="https://discord.com/users/1222992432971513896" target="_blank">Discord: _Valitha_</a></li>
+                <li><a href="https://www.youtube.com/@_Valitha_" target="_blank">YouTube</a></li>
             </ul>
         </section>
     </div>
@@ -115,6 +134,7 @@
 
         showTab('about');
 
+        // Portfolio items
         const portfolioItems = [
             { type: 'image', src: 'Art.jpg', description: 'My Recents' },
             { type: 'youtube', src: 'https://www.youtube.com/embed/u10XdPd9mcE', description: 'Most Recent Upload' },
@@ -136,6 +156,22 @@
             }
             
             portfolioContainer.appendChild(div);
+        });
+
+        // Blog posts
+        const blogPosts = [
+            { date: '2024-09-18', title: 'My First Blog Post', content: 'This is the content of my first blog post. I am so excited to share my thoughts!' },
+            { date: '2024-09-20', title: 'History in Today\'s World', content: 'Exploring how historical events continue to shape our society.' },
+            // Add more blog posts here
+        ];
+
+        const blogContainer = document.getElementById('blog-posts');
+
+        blogPosts.forEach(post => {
+            const div = document.createElement('div');
+            div.className = 'blog-post';
+            div.innerHTML = `<h3>${post.title}</h3><small>${post.date}</small><p>${post.content}</p>`;
+            blogContainer.appendChild(div);
         });
     </script>
 </body>
