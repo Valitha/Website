@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valentina Schroeder</title>
     <style>
-        /* Basic styling for the webpage */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -69,7 +68,6 @@
         </div>
     </header>
 
-    <!-- Navigation Tabs -->
     <nav>
         <a href="#" onclick="showTab('about')">About Me</a>
         <a href="#" onclick="showTab('portfolio')">Portfolio</a>
@@ -77,7 +75,6 @@
     </nav>
 
     <div class="container">
-        <!-- About Me Section -->
         <section id="about" class="tab-content">
             <h2>About Me</h2>
             <img src="profile.jpg" alt="Profile Image">
@@ -86,13 +83,10 @@
             </p>
         </section>
 
-        <!-- Portfolio Section -->
         <section id="portfolio" class="tab-content">
             <h2>Portfolio</h2>
             <div id="portfolio-items"></div>
         </section>
-
-        <!-- Contact Section -->
         <section id="contact" class="tab-content">
             <h2>Contact</h2>
             <p>You can reach me via email: <a href="mailto:justagirlieintheworld@outlook.com">justagirlieintheworld@outlook.com</a></p>
@@ -110,7 +104,6 @@
     </footer>
 
     <script>
-        // JavaScript to handle tab switching
         function showTab(tabId) {
             // Hide all tab content
             const tabContents = document.querySelectorAll('.tab-content');
@@ -120,10 +113,8 @@
             document.getElementById(tabId).style.display = 'block';
         }
 
-        // Show the 'About Me' tab by default
         showTab('about');
 
-        // JavaScript to dynamically add portfolio items
         const portfolioItems = [
             { type: 'image', src: 'Art.jpg', description: 'My Recents' },
             { type: 'youtube', src: 'https://www.youtube.com/embed/u10XdPd9mcE', description: 'Most Recent Upload' },
